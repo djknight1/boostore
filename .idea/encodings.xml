@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/dao/impl/OrderDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/domain/Order.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/domain/Page.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/service/impl/BusinessServiceImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/web/client/BuyServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/web/client/LoginOutServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/web/client/LoginServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/web/client/OrderServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/web/client/RegisterServlet.java" charset="GBK" />
+  </component>
+</project>

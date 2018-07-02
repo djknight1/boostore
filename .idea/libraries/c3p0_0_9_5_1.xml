@@ -1,0 +1,40 @@
+<component name="libraryTable">
+  <library name="c3p0-0.9.5.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/c3p0-0.9.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbutils-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mchange-commons-java-0.2.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.26-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/standard.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/annotations-api.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/catalina-ant.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/catalina-ha.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/catalina-storeconfig.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/catalina-tribes.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/catalina.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/ecj-4.6.3.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/el-api.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/jasper-el.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/jasper.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/jaspic-api.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/jsp-api.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/servlet-api.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-api.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-coyote.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-dbcp.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-jdbc.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-jni.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-util-scan.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-util.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/tomcat-websocket.jar!/" />
+      <root url="jar://D:/Tomcat/apache-tomcat-9.0.1/lib/websocket-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
