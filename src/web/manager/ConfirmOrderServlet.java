@@ -17,11 +17,11 @@ public class ConfirmOrderServlet extends HttpServlet {
 			String orderid = request.getParameter("orderid");
 			BusinessServiceImpl service = new BusinessServiceImpl();
 			service.confirmOrder(orderid);
-			request.setAttribute("message", "��������Ϊ����״̬���뼰ʱ����");
+			request.setAttribute("message", "sending successfully! Congratulation");
 			request.getRequestDispatcher("/message.jsp").forward(request, response);
 		} catch(Exception e){
 			e.printStackTrace();
-			request.setAttribute("message", "ȷ��ʧ��");
+			request.setAttribute("message", "send failed! Sorry!");
 			request.getRequestDispatcher("/message.jsp").forward(request, response);
 		}
 	}

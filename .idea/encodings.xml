@@ -10,5 +10,6 @@
     <file url="file://$PROJECT_DIR$/src/web/client/LoginServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/web/client/OrderServlet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/web/client/RegisterServlet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/web/manager/CategoryServlet.java" charset="UTF-8" />
   </component>
 </project>

@@ -88,8 +88,7 @@ public class BusinessServiceImpl implements BusinessService {
 	    return bookDao.getAllBook();
     }
 
-
-	public void buyBook(Cart cart, Book book) {
+    public void buyBook(Cart cart, Book book) {
 		cart.add(book);
 	}
 	
@@ -107,7 +106,7 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 	
 	//生成订单
-	public void createOrder(Cart cart, User user){
+	public Order createOrder(Cart cart, User user){
 		if(cart == null){
 			throw new RuntimeException("对不起，您还没有购买任何商品");
 		}
@@ -117,17 +116,25 @@ public class BusinessServiceImpl implements BusinessService {
 		order.setPrice(cart.getPrice());
 		order.setState(false);
 		order.setUser(user);
+
+		/* Map.Entry代表Map里面的每一个实体 */
+		/* 遍历Cart里面的cartItem cartItem用Map储存 */
+
 		for(Map.Entry<String, CartItem> me : cart.getMap().entrySet()){
-			//得到一个购物项就生成一个订单项
+			// 得到一个购物项就生成一个订单项
+			/* 得到购物车项的每一个值,得到 */
 			CartItem citem = me.getValue();
 			OrderItem oitem = new OrderItem();
 			oitem.setBook(citem.getBook());
 			oitem.setPrice(citem.getPrice());
 			oitem.setId(WebUtils.makeID());
 			oitem.setQuantity(citem.getQuantity());
+			/* getOrderitems是得到一个orderitems的集合 */
 			order.getOrderitems().add(oitem);
-		}	
+		}
+		/* 向数据库插入一个order类 */
 		orderDao.add(order);
+		return order;
 	}
 
 	//后台获取所有订单信息

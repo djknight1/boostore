@@ -52,16 +52,15 @@ public class BookServlet extends HttpServlet {
 			BusinessServiceImpl service = new BusinessServiceImpl();
 			book.setId(WebUtils.makeID());
 			service.addBook(book);
-			request.setAttribute("message", "��ӳɹ�");
+			request.setAttribute("message", "set success!!!");
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("message", "���ʧ��");
+			request.setAttribute("message", "failed!!!");
 		}
 		request.getRequestDispatcher("/message.jsp").forward(request, response);
 	}
 
 	private Book doupLoad(HttpServletRequest request) {
-		//���ϴ���ͼƬ���浽imagesĿ¼�У�����request�е����������װ��Book��
 		Book book = new Book();
 		try {
 			DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -74,7 +73,7 @@ public class BookServlet extends HttpServlet {
 					BeanUtils.setProperty(book, name, value);
 				}else{
 					String filename = item.getName();
-					String savefilename = makeFileName(filename);//�õ�������Ӳ�̵��ļ���
+					String savefilename = makeFileName(filename);
 					String savepath= this.getServletContext().getRealPath("/images");
 					InputStream in = item.getInputStream();
 					FileOutputStream out = new FileOutputStream(savepath + "\\" + savefilename);
@@ -98,7 +97,7 @@ public class BookServlet extends HttpServlet {
 	}
 	
 	public String makeFileName(String filename){
-		String ext = filename.substring(filename.lastIndexOf(".") + 1);//lastIndexOf("\\.")����д����
+		String ext = filename.substring(filename.lastIndexOf(".") + 1);
 		return UUID.randomUUID().toString() + "." + ext;
 	}
 

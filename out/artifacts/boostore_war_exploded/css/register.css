@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-small{
+    max-width: 432px;
+    margin: 100px auto;
+    border-radius: 10px;
+    background: #fff;
+}
+.head-title{
+    color: #0e8bff;
+}
+.head-title h1{
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+.head-title h2{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.other-option{
+    height: 20px;
+    width: 100%;
+}
+.other-option a:nth-child(1){
+    margin-left: 20px;
+    float: left;
+}
+.other-option a:nth-child(2){
+    margin-right: 20px;
+    float: right;
+}
+
+.subbut{
+    margin: 30px auto;
+    width: 80%;
+}
+
+.other-login{
+    text-align: center;
+}
+.sigh{
+    border-radius: 10px;
+    background: #ccc;
+    margin: 50px -15px 0 -15px;
+    padding: 20px;
+    text-align: center;
+}
+.btn-primary{
+    background:#0084ff;
+}

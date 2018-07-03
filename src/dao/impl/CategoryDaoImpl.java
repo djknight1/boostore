@@ -21,6 +21,7 @@ public class CategoryDaoImpl implements CategoryDao {
             /* 添加分类 */
             QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
             String sql = "insert into category(id,name,description) values(?,?,?)";
+            System.out.println(category.getId()+""+ category.getName()+""+category.getDescription());
             Object params[] = {category.getId(), category.getName(), category.getDescription()};
             runner.update(sql, params);
         } catch (Exception e) {

@@ -9,7 +9,7 @@ public class Order {
     private Date ordertime;
     private double price;
     private boolean state;
-    private User user;//��ס���������ĸ��û�   user_id
+    private User user;
     private Set<OrderItem> orderitems = new HashSet<OrderItem>();
 
     public Set<OrderItem> getOrderitems() {

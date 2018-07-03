@@ -28,7 +28,7 @@ public class UserDaoImpl implements dao.UserDao {
 	public User find(String id){
 		try{
 			QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
-			String sql = "select * from user where id=?";
+			String sql = "select * from user where userid=?";
 			return (User)runner.query(sql, id, new BeanHandler(User.class));
 		} catch(Exception e){
 			throw new RuntimeException(e);

@@ -17,6 +17,7 @@ public class ClientOrderDetailServlet extends HttpServlet {
 		String orderid = request.getParameter("orderid");
 		BusinessServiceImpl service = new BusinessServiceImpl();
 		Order order = service.findOrder(orderid);
+		System.out.println(order.getOrderitems());
 		request.setAttribute("order", order);
 		request.getRequestDispatcher("/client/clientorderdetail.jsp").forward(request, response);
 	}

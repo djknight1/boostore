@@ -12,7 +12,7 @@ import service.impl.BusinessServiceImpl;
 import utils.WebUtils;
 import domain.Category;
 
-//��������CRUD����
+//????????CRUD????
 public class CategoryServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -29,7 +29,7 @@ public class CategoryServlet extends HttpServlet {
 		} else if (method.equals("listall")) {
 			listAll(request, response);
 		} else {
-			request.setAttribute("message", "��֧�ִ������");
+			request.setAttribute("message", "失败！");
 			request.getRequestDispatcher("/message.jsp").forward(request,
 					response);
 		}
@@ -62,18 +62,22 @@ public class CategoryServlet extends HttpServlet {
 		try {
 			String name = request.getParameter("name");
 			String description = request.getParameter("description");
-
+			System.out.println(name);
+			System.out.println(description);
 			Category category = new Category();
 			category.setName(name);
 			category.setDescription(description);
 			category.setId(WebUtils.makeID());
 
+            System.out.println(category.getName());
+            System.out.println(category.getDescription());
+
 			BusinessServiceImpl service = new BusinessServiceImpl();
 			service.addCategory(category);
-			request.setAttribute("message", "��ӳɹ�");
+			request.setAttribute("message", "set success!!");
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("message", "���ʧ��");
+			request.setAttribute("message", "Failed!!!");
 		}
 		request.getRequestDispatcher("/message.jsp").forward(request, response);
 	}
