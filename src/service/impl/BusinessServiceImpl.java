@@ -163,4 +163,10 @@ public class BusinessServiceImpl implements BusinessService {
 	public List<Order> clientListOrder(String userid) {	
 		return orderDao.getAllOrder(userid);
 	}
+
+	public List<Book> getAllBooksByCate(String category_id) {
+		return bookDao.getBookByCategory(category_id);
+	}
+
+
 }

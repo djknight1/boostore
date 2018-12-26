@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import domain.Book;
 import domain.Category;
 import domain.Page;
 import service.impl.BusinessServiceImpl;
@@ -20,7 +21,7 @@ public class IndexServlet extends HttpServlet {
 		if(method.equalsIgnoreCase("getAll")){
 			getAll(request, response);
 		}else if(method.equalsIgnoreCase("listBookWithCategory")){
-			listBookWithCategory(request, response);
+            getAllBooksByCate(request, response);
 		}
 	}
 
@@ -35,7 +36,11 @@ public class IndexServlet extends HttpServlet {
 		
 		request.getRequestDispatcher("/client/body.jsp").forward(request, response);
 	}
-	
+
+
+
+
+
 	public void listBookWithCategory(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		BusinessServiceImpl service = new BusinessServiceImpl();
 		String category_id = request.getParameter("category_id");
@@ -46,6 +51,19 @@ public class IndexServlet extends HttpServlet {
 		request.setAttribute("page", page);
 		request.getRequestDispatcher("/client/body.jsp").forward(request, response);
 	}
+
+
+
+	public void getAllBooksByCate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		BusinessServiceImpl service = new BusinessServiceImpl();
+		String category_id = request.getParameter("category_id");
+		List<Book> booklist = service.getAllBooksByCate(category_id);
+		request.setAttribute("booklist", booklist);
+        request.getRequestDispatcher("/client/categoryBook.jsp").forward(request, response);
+	}
+
+
+
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

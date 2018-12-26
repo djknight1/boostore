@@ -14,7 +14,7 @@ public class UserDaoImpl implements dao.UserDao {
 	public void add(User user){
 		try{
 			QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
-			String sql = "insert into user(id,username,password,phone,cellphone,address,email) values(?,?,?,?,?,?,?)";
+			String sql = "insert into user(username,password,id,phone,cellphone,address,email) values(?,?,?,?,?,?,?)";
 			Object params[] = {user.getId(), user.getUsername(), user.getPassword(), user.getPhone(), user.getCellphone(), user.getAddress(), user.getEmail()};
 			runner.update(sql, params);
 		} catch(Exception e){

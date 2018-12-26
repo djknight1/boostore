@@ -18,5 +18,6 @@ public interface BookDao {
 	public List<Book> getPageData(int startindex, int pagesize, String category_id);
 	
 	public int getTotalRecord(String category_id);
+	public List<Book> getBookByCategory(String category_id);
 
 }

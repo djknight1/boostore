@@ -114,4 +114,17 @@ public class BookDaoImpl implements BookDao {
             throw new RuntimeException(e);
         }
     }
+
+    public List<Book> getBookByCategory(String category_id) {
+            try {
+                QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
+                String sql = "select * from book where category_id=?";
+                List<Book> list = runner.query(sql,category_id ,new BeanListHandler<Book>(Book.class));
+                return list;
+            } catch (Exception e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            }
+    }
+
 }

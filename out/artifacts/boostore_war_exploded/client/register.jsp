@@ -21,19 +21,27 @@
         <h2>现在注册，发现更大的世界</h2>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="用户名">
+        <input name="username" type="text" class="form-control" placeholder="用户名">
     </div>
     <div class="form-group">
-        <input type="password" class="form-control" placeholder="请输入密码">
+        <input name="password" type="password" class="form-control" placeholder="请输入密码">
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="手机">
+        <input name="id" type="text" class="form-control" placeholder="用户id">
+    </div>
+
+    <div class="form-group">
+        <input name="phone" type="text" class="form-control" placeholder="手机">
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="邮箱">
+        <input name="cellphone" type="text" class="form-control" placeholder="移动手机">
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="住址">
+        <input name="address" type="text" class="form-control" placeholder="住址">
+    </div>
+
+    <div class="form-group">
+        <input name="email" type="text" class="form-control" placeholder="邮箱">
     </div>
     <div class="form-group subbut">
         <button type="submit" class="btn btn-primary btn-block">注册</button>
